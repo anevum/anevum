@@ -29,3 +29,10 @@ The inspection found 848 branches, 280 open pull requests, 62 open issues and 35
 A limited environment-file check found no populated secret-like values in the two historical versions of the tracked ANEVUM web production environment file or the 22 historical versions of RHEN's tracked example environment file. This was a narrow pattern check, not a comprehensive credential or history scan.
 
 Review the ANEVUM web release workflows and production route before removing any code. Keep the retired legacy production deployment disabled. Configure practical branch protection and required checks after identifying the checks that actually run for the intended changes. Review current and historical credentials, licensing and third-party rights; RHEN and Family Adventure Book now include Apache-2.0 licenses after the owner confirmed ownership; respect separately licensed dependencies and notices. No comprehensive secret-history audit, infrastructure cleanup, deployment handover or account-wide governance completion is claimed here.
+
+## Continuation — 2026-10-30
+
+- Verified the 12 accessible repositories and the handoff against live GitHub state. Brandicade, DevonStation, IdeaFlow and CristyRusso.com remain not fully imported. Do not mark them done based on README-only main branches.
+- [ANEVUM web PR #797](https://github.com/anevum/anevum-web/pull/797) corrected inaccurate instructions about the retired deployment workflow and was squash-merged as `34b93f1f426f21ac9f8e63d0e0d5bad31b869a99`. Documentation change only; it does not authorize a production deployment.
+- PR #797 CI failed **after** application tests and build, when the Wrangler preview response returned `preview.urls: []` and the workflow's `.preview.urls[0]` extraction exited 1. Failure was documented on the PR. Investigate the preview publication/URL contract and keep the check marked failed rather than bypassing privacy or runtime gates.
+- Branch protection remains unconfirmed, and no deployment, secret, route, D1, public archive or production access ownership was changed during this continuation.
