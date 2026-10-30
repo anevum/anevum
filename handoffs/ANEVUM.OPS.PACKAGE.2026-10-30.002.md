@@ -63,3 +63,15 @@ Review the ANEVUM web release workflows and production route before removing any
 - PR-head `verify` check passed, then PR was squash-merged at `391f10866438dd4f3541f217094860297bbec0a6`.
 - Re-read `SECURITY.md` from main and confirmed successful main-branch `Brandle standalone verification` run `41117000501` against that exact commit.
 - No Brandle production deployment, secrets, DNS, D1, or old deployer ownership changed. The Brandle cutover remains a separate gated job.
+
+## Small job 002 — Brandle deployment ownership and rollback inventory (2026-10-30)
+
+**Status: read-only audit completed; deployment cutover NOT authorized or performed.**
+
+- Both `anevum/brandle` and `anevum/anevum-web/games/brandle` have identical Git blob IDs for `build-worker.mjs` (`123bd0c3ef48c6f65c1609a4dced3b2533e1fc4c`) and `wrangler.toml` (`2f8bab43bd69eb97b13c21f94db13eb449980885`). Both target only `brandle-glimmer-grove`, with `workers_dev = true` and compatibility date `2026-10-29`.
+- `anevum/anevum-web/.github/workflows/deploy-brandle.yml` is still able to deploy from the monorepo on selected `main` game-source changes and manually via `workflow_dispatch`. A PR cannot deploy through that workflow. The standalone repo's `.github/workflows/ci.yml` only builds and verifies and has no deployment step.
+- Cloudflare Worker `brandle-glimmer-grove` has its `workers.dev` subdomain and previews enabled. The settings endpoint reported **zero runtime bindings**; this does not establish the permissions of the GitHub deployment credential. No databases or custom domain routes were found in its standalone Wrangler config.
+- Cloudflare's latest deployment ID `86970d97-7975-45e5-a000-0fba9a7379f6` (2026-10-30 01:16:40 UTC) points 100% to version `1c48deb3-6c35-4b9b-9d84-a37d2596ca70`. Three earlier versions remain in Cloudflare's version listing (`ba5fe54e-142d-4faf-b75c-4e95d88f3d69`, `7e854856-1457-4b9b-8bf6-83615f2eaadb`, `2e9071b8-8743-4383-af1d-a457b7ead4d2`). The current deployment source is recorded as Wrangler; these are **potential rollback targets**, not proven reversible releases.
+- Standalone CI after security-policy merge passed: [GitHub run 41117000501](https://github.com/anevum/brandle/actions/runs/41117000501), commit `391f10866438dd4f3541f217094860297bbec0a6`. Build reproducibility from a local fresh checkout, exact-byte parity to live deployed code, and a rollback rehearsal were not established in this read-only job.
+
+**Next small job:** Audit existing credential scopes and permitted deployment mechanism without exposing secret values; recover the exact live release artifact, run isolated build/route/browser acceptance checks, and establish a tested rollback procedure. Then perform a single-deployer cutover: disable the old monorepo deploy path before enabling a new scoped standalone deploy path. Recheck real Worker version/URL and both workflows afterward. Avoid changing production for the audit-only step.
