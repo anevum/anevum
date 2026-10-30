@@ -98,3 +98,9 @@ Review the ANEVUM web release workflows and production route before removing any
 - Verified `.github/staged-releases/brandle-production.yml` and `docs/DEPLOYMENT_HANDOVER.md` are present on `main`. The template is outside `.github/workflows` and cannot be dispatched as a workflow; release ownership has not transferred.
 - GitHub branch metadata explicitly says `main.protected=false`. The connected integration's generic GitHub fetch cannot read `/environments` (unsupported URL); environment rules and credential scoping remain unverified. Do **not** activate the template or assume environment approvals are enforced.
 - The post-merge standalone CI run [`41123827902`](https://github.com/anevum/brandle/actions/runs/41123827902) **passed** at exact merge commit `0a08d7038b1ed79d998078a09b4423ffb5b09694`. Production and legacy deploy workflow unchanged.
+
+## Small job 006 — Brandle CI release-ownership guard (2026-10-30)
+
+- GitHub confirmed `anevum/brandle` main is **unprotected** and its repository ruleset list is empty; the connected GitHub tool cannot inspect or configure environment secrets/approval rules. Administrative controls are not verified.
+- Opened [Brandle PR #6](https://github.com/anevum/brandle/pull/6) (`4038b68b886e9be854fdc538ce61e9c7cf6c4e0c`) with `release-guard.test.mjs` and CI integration. It asserts that the only active standalone Actions workflow remains CI, release credentials/deployment commands are absent from CI, and the inactive staged release remains manual-only and requires owner flags, exact-SHA ancestry, and an environment.
+- CI for PR #6 has not yet been confirmed passing at this checkpoint. No production Worker, domain, legacy workflow, token or deployment settings changed. Do not merge until head checks pass; still do not activate a deployer until branch and environment protections plus rollback are verified.
