@@ -206,3 +206,11 @@ Review the ANEVUM web release workflows and production route before removing any
 - Corrected the standalone repository README in [PR #10](https://github.com/anevum/family-adventure-book/pull/10): removed the false assertion that it had not been deployed and labeled proposed Pages settings as unverified. Exact-head [CI run 41143749326](https://github.com/anevum/family-adventure-book/actions/runs/41143749326) passed; merged as `2c14911a25829fd3ed2f7b2c85b5fe531bb94789`; main README re-read successfully.
 - Updated the existing Notion infrastructure record, distinguishing GitHub main from the unknown Worker source revision. No Worker, route, access policy, game source, or deployment changed.
 - Next: independently verify Worker source and release provenance, route and access, and rollback before considering changes to hosting. Preserve the existing draft game work.
+
+
+## Small job 022 — DevonStation V0.3 source-lineage verification (2026-10-30)
+
+- Read-only SHA-256 comparison matched all four active V0.3 Worker modules with the preserved private V0.3 archive. The later recovery draft's auth and notifications modules match; its server entry differs from the live V0.3 entry. This observation does not verify configuration, data recovery, or subsequent deployments.
+- With owner approval, preserved the original V0.3 server entry and a lineage note in [DevonStation draft PR #1](https://github.com/anevum/devon-station/pull/1) at `19571609b9945c549fe087135e5176f45280ecb0`. The entry is an archival reference, not a standalone build. A fingerprint regression check was added; **38/38** local tests and [exact-head CI run 41144481981](https://github.com/anevum/devon-station/actions/runs/41144481981) passed.
+- R3 versus repaired R4 archive comparison found the selected server, schema, sync and test files identical before the draft's synthetic test-ID substitution. The V0.4.8 candidate remains different from the live V0.3 service.
+- No production deployment, database, Access or route changed. Frontend recovery, full privacy and license review, authentic D1 export restore, real access and device acceptance, and release ownership remain open; keep PR #1 draft and unmerged.
