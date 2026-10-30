@@ -32,4 +32,4 @@ Other repositories contain independent work in progress, including games, person
 
 **Currently:** Consolidating the GitHub portfolio into maintainable repositories while continuing work on ANEVUM, writing, and independent software.
 
-*Project descriptions and deployment links are maintained in their respective repositories.*
+[Project registry](./PROJECT_REGISTRY.md) · Project-specific details are maintained in their respective repositories.
