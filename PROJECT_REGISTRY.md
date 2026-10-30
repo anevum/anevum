@@ -14,7 +14,7 @@ Snapshot: October 30, 2026. This registry describes public source status, not de
 | [cristybreathe](https://github.com/anevum/cristybreathe) | Personal workspace software | Source, tests and Apache-2.0 license imported in [PR 1](https://github.com/anevum/cristybreathe/pull/1). Later work needs reconciliation before release. |
 | [brandicade](https://github.com/anevum/brandicade) | Independent game collection | README only; source reconciliation pending. |
 | [devon-station](https://github.com/anevum/devon-station) | Personal workspace software | README only; public-safe source review pending. |
-| [ideaflow](https://github.com/anevum/ideaflow) | Idea capture and meeting software | README only; public-safe source recovery pending. |
+| [ideaflow](https://github.com/anevum/ideaflow) | Idea capture and meeting software | README only; earlier intake/operations source and a separate meeting-presenter release located, but current public-safe source reconciliation is pending. |
 | [severance](https://github.com/anevum/severance) | ANEVUM game development | Godot prototype and separate offline world-state lab imported in [PR 1](https://github.com/anevum/severance/pull/1); the original prototype history remains in [anevum-web](https://github.com/anevum/anevum-web/pull/788). |
 | [cristyrusso.com](https://github.com/anevum/cristyrusso.com) | Professional website | README only; source recovery pending. |
 
