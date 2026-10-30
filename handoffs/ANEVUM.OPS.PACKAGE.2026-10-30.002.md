@@ -198,3 +198,11 @@ Review the ANEVUM web release workflows and production route before removing any
 - Read-only Cloudflare recheck: existing `devon-station` Worker still sends 100% traffic to version `bbceaf9e-0e2a-486e-ae46-90092692e48b`; its D1, Access configuration and notifications bindings remain present. No production deployment, D1, Access or other infrastructure changed. Archive candidate is **not verified to match the live V0.3 Worker**.
 - Recovery remains partial: frontend, build, backup UI and complete release source are missing from the draft. Archive declares `UNLICENSED`; resolve source rights and third-party attribution and perform complete private-data review before merge. Historical source lineage, authenticated acceptance, authentic D1 export restore, iPhone testing and release/rollback ownership remain open. An R4 repaired source package is recorded in the existing Notion development checkpoint and should be inspected against this R3 subset before choosing the continuing baseline.
 - Next independent job: reconcile the current live V0.3 source against recovered candidates or safely recover and test the hosted interface from the repaired package, using synthetic data. Preserve private inventory and never deploy based on this draft.
+
+
+## Small job 023 — Family Adventure Book deployment status (2026-10-30)
+
+- Read-only Cloudflare inspection identified a `family-adventure-book` Worker with an active deployment. This does not establish the source revision, intended route, access policy, release owner, rollback, or source parity.
+- Corrected the standalone repository README in [PR #10](https://github.com/anevum/family-adventure-book/pull/10): removed the false assertion that it had not been deployed and labeled proposed Pages settings as unverified. Exact-head [CI run 41143749326](https://github.com/anevum/family-adventure-book/actions/runs/41143749326) passed; merged as `2c14911a25829fd3ed2f7b2c85b5fe531bb94789`; main README re-read successfully.
+- Updated the existing Notion infrastructure record, distinguishing GitHub main from the unknown Worker source revision. No Worker, route, access policy, game source, or deployment changed.
+- Next: independently verify Worker source and release provenance, route and access, and rollback before considering changes to hosting. Preserve the existing draft game work.
