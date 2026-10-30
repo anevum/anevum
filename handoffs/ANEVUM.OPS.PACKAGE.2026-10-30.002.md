@@ -146,3 +146,9 @@ Review the ANEVUM web release workflows and production route before removing any
 - CI status not yet reported for that exact head at checkpoint. **Do not merge PR #1** until tests pass and source/rights/privacy boundaries are reviewed; no production Worker, auth, cloud saves, or default branch was modified.
 
 - Job 012 correction: the first test-file creation did not persist; verified the file on the draft branch after retry. Final PR head is `4fd1313e56dc3ab3ea306e0885fb26e7eaae50b1`, test-file blob `d45a6902f59290b93a8ea41627329d5d80160bfb`. Final file tests deterministic builds and explicit MIT/GPL and cloud-save warnings; it does **not** yet validate the 14-asset route inventory. GitHub reported no check runs for the final head when checked; CI is **unverified**. Keep PR #1 draft and unmerged.
+
+## Small job 013 — Brandicade recovery draft conflict resolution (2026-10-30)
+
+- Latest draft PR #1 head `4fd1313e...` had **no check runs**, and GitHub reported `mergeable_state=dirty`. The previously passing CI applied to the older `27f78cb6...` source, not the added static build tests.
+- Confirmed the only conflict stemmed from a newer `main` README which documented missing live cloud-save/Access source and the MIT/GPL notice contradiction. Added equivalent accurate project/ownership boundaries to the draft README and created an explicit two-parent merge commit `0f6dabe74aa203d41c8da4190a689b7cb38429de` incorporating `main` ancestry, then advanced the draft branch with expected-SHA lease. GitHub now reports PR #1 `mergeable=true`, still draft.
+- Check runs for the new merge head were empty at first observation. **Do not merge** without fresh CI and without independent server-source, access, and licensing review. No `main`, Worker, live saves, Access or production deployment changed.
