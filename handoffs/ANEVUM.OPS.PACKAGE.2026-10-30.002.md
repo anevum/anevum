@@ -36,3 +36,9 @@ Review the ANEVUM web release workflows and production route before removing any
 - [ANEVUM web PR #797](https://github.com/anevum/anevum-web/pull/797) corrected inaccurate instructions about the retired deployment workflow and was squash-merged as `34b93f1f426f21ac9f8e63d0e0d5bad31b869a99`. Documentation change only; it does not authorize a production deployment.
 - PR #797 CI failed **after** application tests and build, when the Wrangler preview response returned `preview.urls: []` and the workflow's `.preview.urls[0]` extraction exited 1. Failure was documented on the PR. Investigate the preview publication/URL contract and keep the check marked failed rather than bypassing privacy or runtime gates.
 - Branch protection remains unconfirmed, and no deployment, secret, route, D1, public archive or production access ownership was changed during this continuation.
+
+## Continuation — CI preview scope patch
+
+- Opened [anevum-web PR #798](https://github.com/anevum/anevum-web/pull/798) to exempt root `README.md`-only edits from the otherwise fail-closed legacy Cloudflare preview stage. Mixed README/runtime edits still require preview; two regression tests were added. This is a source-control verification patch, not a production change.
+- At handoff, the exact-head ANEVUM Verify and Repository migration verification runs were **queued**, not passed. Do not merge before results are inspected. If the preview step is skipped on the patch, that is by the narrow reviewed maintenance-file allowlist; all other offline safety checks remain.
+- Cloudflare documentation confirms preview URL publication depends on explicit configuration and can be disabled. The actual reason the earlier Wrangler preview response returned an empty URL has not yet been established; do not change public preview accessibility without review.
