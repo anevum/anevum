@@ -218,8 +218,9 @@ Review the ANEVUM web release workflows and production route before removing any
 
 ## Small job 024 — IdeaFlow source recovery status (2026-10-30)
 
-- IdeaFlow source reconciliation remains in progress. Automatic review blocked a proposed public source import pending specific authorization; no source commit or pull request was created.
-- A private checkpoint records the work and next steps. No production resources were changed. Continue other independent jobs while the source-publication question is resolved.
+- Owner explicitly approved publication of the reviewed analyzer source, tests, verification workflow and recovery note. [IdeaFlow draft PR #1](https://github.com/anevum/ideaflow/pull/1) contains the compiled production analyzer recovery reference at `9f5a229c0d2e53adf1fa45a920934bd5155d53b4`. The committed Git blob matches the local source, whose SHA-256 matched the observed active analyzer module.
+- Five synthetic manual-gate and retention-schedule tests passed locally and in [exact-head CI run 41147131519](https://github.com/anevum/ideaflow/actions/runs/41147131519). These use mocked storage with locks unavailable; they do not establish live authorization, deletion, transcription or backup recovery.
+- Recovery is incomplete: the editable analyzer source, other service components, rights review, authentic recovery, authentication and deployment ownership remain open. Preserve manual processing and separately necessary privacy retention. Keep the PR draft and unmerged; no production resources were changed.
 
 
 ## Small job 025 — Family Adventure Book release-owner discovery (2026-10-30)
