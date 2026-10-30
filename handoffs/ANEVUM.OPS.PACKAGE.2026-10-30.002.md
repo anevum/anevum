@@ -119,3 +119,10 @@ Review the ANEVUM web release workflows and production route before removing any
 - PR #8 head is `fed02b043571eaa8100ad801ca6062063b2717cb`; CI was queued when first checked. Merge only on passing exact-head verification. The old deployment owner and live Worker remain untouched.
 
 - Job 008 follow-up: PR #8 exact-head `verify` passed; merged documentation-only commit `4bb985fda3f888d80f22cb49f95b7ebbdaebf29d` and verified `docs/ROLLBACK_VERIFICATION.md` on `main`. Post-merge CI was queued at the verification point; do not claim its success without checking. No live rollback occurred.
+
+## Small job 009 — Brandle historical release integrity baseline (2026-10-30)
+
+- Verified PR #8 post-merge GitHub Actions `verify` passed on exact commit `4bb985fda3f888d80f22cb49f95b7ebbdaebf29d` ([run 41125915054](https://github.com/anevum/brandle/actions/runs/41125915054)). `main` still unprotected and rulesets still empty.
+- Opened [Brandle PR #9](https://github.com/anevum/brandle/pull/9) at `1187781a5bb3fd97132abe8fc0effd4dcf335362` to preserve 12 SHA-256 values from the *previously* observed live Worker, add a no-network local asset comparison command, add parity/drift/missing-file tests, and wire those tests into CI.
+- This is an immutable historical baseline. CI must pass before merge. A fresh Cloudflare inspection call was blocked, so do not claim current live parity, credential inspection, rollback rehearsal or production cutover.
+- Head CI was queued at the checkpoint ([run 41126346886](https://github.com/anevum/brandle/actions/runs/41126346886)). No production settings or Worker deployments were changed.
