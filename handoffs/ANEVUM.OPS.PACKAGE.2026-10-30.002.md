@@ -204,7 +204,7 @@ Review the ANEVUM web release workflows and production route before removing any
 
 - Read-only Cloudflare inspection identified a `family-adventure-book` Worker with an active deployment. This does not establish the source revision, intended route, access policy, release owner, rollback, or source parity.
 - Corrected the standalone repository README in [PR #10](https://github.com/anevum/family-adventure-book/pull/10): removed the false assertion that it had not been deployed and labeled proposed Pages settings as unverified. Exact-head [CI run 41143749326](https://github.com/anevum/family-adventure-book/actions/runs/41143749326) passed; merged as `2c14911a25829fd3ed2f7b2c85b5fe531bb94789`; main README re-read successfully.
-- Updated the existing Notion infrastructure record, distinguishing GitHub main from the unknown Worker source revision. No Worker, route, access policy, game source, or deployment changed.
+- Updated the existing Notion infrastructure record. **Correction:** the README merge triggered an automatic Cloudflare Worker deployment, as established in Small Job 025 below. No route, access policy or game source was intentionally changed.
 - Next: independently verify Worker source and release provenance, route and access, and rollback before considering changes to hosting. Preserve the existing draft game work.
 
 
@@ -220,3 +220,11 @@ Review the ANEVUM web release workflows and production route before removing any
 
 - IdeaFlow source reconciliation remains in progress. Automatic review blocked a proposed public source import pending specific authorization; no source commit or pull request was created.
 - A private checkpoint records the work and next steps. No production resources were changed. Continue other independent jobs while the source-publication question is resolved.
+
+
+## Small job 025 — Family Adventure Book release-owner discovery (2026-10-30)
+
+- Corrected Small Job 023: merging README-only [PR #10](https://github.com/anevum/family-adventure-book/pull/10) triggered an automatic Cloudflare Builds deployment. Cloudflare's build record identifies the exact merge commit `2c14911a25829fd3ed2f7b2c85b5fe531bb94789`, and build logs report no updated asset files. A new Worker version was nevertheless deployed; the previous claim that no deployment occurred was incorrect.
+- The connected Cloudflare Builds trigger watches `main`, with a broad path filter and `npx wrangler deploy`. The GitHub Actions run passed but is a separate check and was not proven to gate deployment. Cloudflare reported no custom Worker domain or zone route for this script at inspection. Asset-by-asset parity, access policy and rollback remain unverified.
+- Opened [Family Adventure Book issue #11](https://github.com/anevum/family-adventure-book/issues/11) for safe watch-path, release gating, toolchain, credential and recovery work. Updated the existing private Notion infrastructure record. No deployment trigger, route, access policy or production asset was modified during this investigation.
+- Next: verify source assets and safe rollback, then safely test a documented release path before changing the existing trigger. Do not assume that documentation-only merges are non-deploying on other repositories.
