@@ -15,7 +15,7 @@ Snapshot: October 30, 2026. This registry describes public source status, not de
 | [brandicade](https://github.com/anevum/brandicade) | Independent game collection | README only; source reconciliation pending. |
 | [devon-station](https://github.com/anevum/devon-station) | Personal workspace software | README only; public-safe source review pending. |
 | [ideaflow](https://github.com/anevum/ideaflow) | Idea capture and meeting software | README only; public-safe source recovery pending. |
-| [severance](https://github.com/anevum/severance) | ANEVUM game development | README only; a separate [draft prototype](https://github.com/anevum/anevum-web/pull/788) exists. |
+| [severance](https://github.com/anevum/severance) | ANEVUM game development | Godot prototype and separate offline world-state lab imported in [PR 1](https://github.com/anevum/severance/pull/1); the original prototype history remains in [anevum-web](https://github.com/anevum/anevum-web/pull/788). |
 | [cristyrusso.com](https://github.com/anevum/cristyrusso.com) | Professional website | README only; source recovery pending. |
 
 Brandle and CristyBreathe imports preserve project-specific lineage while retaining the original history in anevum-web. Their standalone main-branch verification passed at the imported commits. That does not by itself establish production deployment ownership or verify every feature.
