@@ -214,3 +214,9 @@ Review the ANEVUM web release workflows and production route before removing any
 - With owner approval, preserved the original V0.3 server entry and a lineage note in [DevonStation draft PR #1](https://github.com/anevum/devon-station/pull/1) at `19571609b9945c549fe087135e5176f45280ecb0`. The entry is an archival reference, not a standalone build. A fingerprint regression check was added; **38/38** local tests and [exact-head CI run 41144481981](https://github.com/anevum/devon-station/actions/runs/41144481981) passed.
 - R3 versus repaired R4 archive comparison found the selected server, schema, sync and test files identical before the draft's synthetic test-ID substitution. The V0.4.8 candidate remains different from the live V0.3 service.
 - No production deployment, database, Access or route changed. Frontend recovery, full privacy and license review, authentic D1 export restore, real access and device acceptance, and release ownership remain open; keep PR #1 draft and unmerged.
+
+
+## Small job 024 — IdeaFlow source recovery status (2026-10-30)
+
+- IdeaFlow source reconciliation remains in progress. Automatic review blocked a proposed public source import pending specific authorization; no source commit or pull request was created.
+- A private checkpoint records the work and next steps. No production resources were changed. Continue other independent jobs while the source-publication question is resolved.
