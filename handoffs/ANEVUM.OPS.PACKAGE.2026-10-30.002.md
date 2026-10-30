@@ -91,3 +91,10 @@ Review the ANEVUM web release workflows and production route before removing any
 - The template includes exact-SHA main-ancestry checks, standalone source build/tests, a Worker-name boundary check, environment and owner-switch gates, and a basic post-release HTTP smoke. These checks do **not** prove effective GitHub environment protection or credential scopes; source checks are not sufficient for full release approval.
 - At first check, PR #5 exact-head `verify` was **queued**. Review CI before merge. No production, Cloudflare, GitHub secrets, route, D1 or old monorepo deployment ownership changed.
 - Cutover still requires scoped credential verification, protected environment confirmation, actual rollback rehearsal, and a second reviewed change that disables legacy deployment before activating the standalone workflow. See the PR handover document.
+
+## Small job 005 — merge inactive Brandle release template (2026-10-30)
+
+- [Brandle PR #5](https://github.com/anevum/brandle/pull/5) exact-head `verify` check passed on `6e88b446b3ec55e51eb673ebc091a4e2acedb80a`. Squash merged to standalone main as `0a08d7038b1ed79d998078a09b4423ffb5b09694`.
+- Verified `.github/staged-releases/brandle-production.yml` and `docs/DEPLOYMENT_HANDOVER.md` are present on `main`. The template is outside `.github/workflows` and cannot be dispatched as a workflow; release ownership has not transferred.
+- GitHub branch metadata explicitly says `main.protected=false`. The connected integration's generic GitHub fetch cannot read `/environments` (unsupported URL); environment rules and credential scoping remain unverified. Do **not** activate the template or assume environment approvals are enforced.
+- At checkpoint the post-merge standalone CI run `41123827902` was in progress, not yet verified successful. Production and legacy deploy workflow unchanged.
