@@ -56,3 +56,10 @@ Review the ANEVUM web release workflows and production route before removing any
 - GitHub ruleset-list reads returned empty; branch-protection reads were denied to this integration. No effective branch protection was verified.
 - Brandicade and CristyBreathe draft heads had passing CI checks, but licensing, backend parity, private migration and access safeguards remain release gates. Do not merge or deploy based on CI alone.
 - **Completion status remains NOT COMPLETE**; no production changes or destructive archive/branch cleanup were performed in this verification pass.
+
+## Small job 001 — Brandle security policy (2026-10-30)
+
+- Inspected exact change in [Brandle PR #4](https://github.com/anevum/brandle/pull/4): adds only `SECURITY.md`, directing private security reports to the existing owner address and prohibiting unsafe production probing.
+- PR-head `verify` check passed, then PR was squash-merged at `391f10866438dd4f3541f217094860297bbec0a6`.
+- Re-read `SECURITY.md` from main and confirmed successful main-branch `Brandle standalone verification` run `41117000501` against that exact commit.
+- No Brandle production deployment, secrets, DNS, D1, or old deployer ownership changed. The Brandle cutover remains a separate gated job.
