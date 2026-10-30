@@ -1,7 +1,7 @@
 # Public project registry
 
 Session: `ANEVUM.OPS.PACKAGE.2026-10-30.002.COMPLETE-GITHUB-RESTRUCTURE`  
-Snapshot: October 30, 2026. This registry describes public source status, not deployment readiness. Verify the current project and release documentation before making changes. Private operations and recovery information belong in private records.
+Snapshot: October 30, 2026. This registry describes public source status, not deployment readiness. [See the evidence-based completion audit](./AUDIT_2026-10-30.md): repository reorganization is **not complete**. Verify the current project and release documentation before making changes. Private operations and recovery information belong in private records.
 
 | Repository | Project | Public source status |
 | --- | --- | --- |
