@@ -111,3 +111,9 @@ Review the ANEVUM web release workflows and production route before removing any
 - Created [Brandle issue #7](https://github.com/anevum/brandle/issues/7), an explicit administrative configuration checklist for protected `main`, required checks, protected `brandle-production` environment, scoped Cloudflare credentials, secret presence checks, and safely sequenced single-deployer cutover. For a solo maintainer, required reviewer count should remain zero until a genuine independent reviewer is available.
 - GitHub connector has code/content privileges but no branch-rule/environment administration action; no protection or secret change was made. **Do not treat the issue as implementation of those settings.** No live Worker, routing, old deployer, or standalone release activation changed.
 - Next job: once admin checks have verifiable evidence, independently review the rollback rehearsal and only then prepare the legacy deployer retirement PR, retaining a non-deploying verification path.
+
+## Small job 008 — Brandle rollback procedure preparation (2026-10-30)
+
+- Opened [Brandle PR #8](https://github.com/anevum/brandle/pull/8) with `docs/ROLLBACK_VERIFICATION.md`, a non-destructive checklist for current-version confirmation, 12-asset hashes, safe HTTP/gameplay smoke, release credential review and an explicitly separate authorized rollback rehearsal.
+- A proposed read-only network verification script was blocked by safety checks and **was not committed or tested**. No fresh Cloudflare parity check or rollback rehearsal was performed. Documentation is the only change.
+- PR #8 head is `fed02b043571eaa8100ad801ca6062063b2717cb`; CI was queued when first checked. Merge only on passing exact-head verification. The old deployment owner and live Worker remain untouched.
