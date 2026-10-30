@@ -117,3 +117,5 @@ Review the ANEVUM web release workflows and production route before removing any
 - Opened [Brandle PR #8](https://github.com/anevum/brandle/pull/8) with `docs/ROLLBACK_VERIFICATION.md`, a non-destructive checklist for current-version confirmation, 12-asset hashes, safe HTTP/gameplay smoke, release credential review and an explicitly separate authorized rollback rehearsal.
 - A proposed read-only network verification script was blocked by safety checks and **was not committed or tested**. No fresh Cloudflare parity check or rollback rehearsal was performed. Documentation is the only change.
 - PR #8 head is `fed02b043571eaa8100ad801ca6062063b2717cb`; CI was queued when first checked. Merge only on passing exact-head verification. The old deployment owner and live Worker remain untouched.
+
+- Job 008 follow-up: PR #8 exact-head `verify` passed; merged documentation-only commit `4bb985fda3f888d80f22cb49f95b7ebbdaebf29d` and verified `docs/ROLLBACK_VERIFICATION.md` on `main`. Post-merge CI was queued at the verification point; do not claim its success without checking. No live rollback occurred.
