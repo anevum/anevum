@@ -269,3 +269,12 @@ Review the ANEVUM web release workflows and production route before removing any
 - Added the existing tested Git-history scan and synthetic tests to verification-only CI in [CristyBreathe PR #3](https://github.com/anevum/cristybreathe/pull/3). [Exact-head CI 41152446616](https://github.com/anevum/cristybreathe/actions/runs/41152446616) passed; merged as `0f86fda7922891a824663fceabccc4661d73b2b4`; [main CI 41152525933](https://github.com/anevum/cristybreathe/actions/runs/41152525933) passed. Scanner blob was re-read from main.
 - Calendar [draft PR #2](https://github.com/anevum/cristybreathe/pull/2) remained open, draft and mergeable after the change; its backup, Access, isolation and release gates remain open. No production Worker, access policy, D1 database, records or secrets were changed. The existing private business security register was updated.
 - Next: scan the remaining source-bearing repos and historical refs in bounded jobs, and verify authentic CristyBreathe backup restoration and release ownership before any calendar cutover.
+
+
+## Small job 031 — Severance targeted history guard (2026-10-30)
+
+- Reviewed [Severance PR #2](https://github.com/anevum/severance/pull/2): exactly four added files, a scoped history credential scanner, two synthetic tests, coverage documentation, and verification-only CI. No production or runtime deploy path was added or changed.
+- All seven exact-head PR/push checks for `646ba528753f29f3b8926677377a685507213753` passed, including targeted credential checks, world-state tests, Godot parse/private-network smoke, and isolated WebGL export. Merged PR #2 to main at `e8560c42d314e34ca1c6d0bb77f5938bb90bb589`; verified main ref and scanner blob `190b5a7bf4bc22521c9a903818a5781091e00f8d` by readback.
+- The post-merge main-branch checks were still running at the observation point; do not call them successful until GitHub reports completion.
+- The scanner checks eight targeted credential formats only in text blobs reachable from refs present in its checkout. This does not establish a comprehensive secrets, binary, privacy, all-branch or archived-source audit. Any authentic finding needs private rotation and triage.
+- Next: verify post-merge main CI, then extend narrowly scoped history checks to other source-bearing repositories while preserving existing deployment and source-lineage boundaries.
