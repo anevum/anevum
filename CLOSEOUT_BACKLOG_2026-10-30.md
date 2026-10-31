@@ -5,6 +5,56 @@ Session: `ANEVUM.OPS.PACKAGE.2026-10-30.002.COMPLETE-GITHUB-RESTRUCTURE`.
 
 **Verdict: NOT COMPLETE.** The twelve public repositories exist, but source ownership, effective branch controls, release ownership, source/rights provenance and the large historical backlog are not resolved. This is an evidence-grounded inventory, not authorization to alter live resources.
 
+## Scope reset: current-portfolio-first closeout (October 30, 2026 local; Small Job 044)
+
+**Decision:** The current personal/business and family-creative portfolio, not historical branch count, defines operational closeout. This section **supersedes the old requirement to manually classify all 315 open PRs and 1,466 branches before declaring the current operating portfolio organized**. The full inventory remains useful historical evidence; old Git history is not erased and must not be bulk-deleted. The old C1-C6 audit is a record of its original, broader scope, not a command to complete every obsolete prototype.
+
+Only maintain a project if it (a) supports current authorized business/operations, (b) serves a real personal/family need, or (c) is intentionally preserved creative/IP source. Otherwise freeze development and assess reversible retirement.
+
+| Repository | Disposition | Narrow operating obligation |
+| --- | --- | --- |
+| [anevum](https://github.com/anevum/anevum) | **ACTIVE** | Public profile, project index and source-of-truth registry |
+| [anevum-web](https://github.com/anevum/anevum-web) | **ACTIVE / RESTRICT** | Maintain real website/routes and required releases; stop broad speculative platform work |
+| [cristybreathe](https://github.com/anevum/cristybreathe) | **ACTIVE** | Current private business workspace; preserve Access and data boundaries |
+| [ideaflow](https://github.com/anevum/ideaflow) | **ACTIVE / MAINTENANCE** | Current manual processing and automatic retention safeguards; recover deployable source only as needed |
+| [devon-station](https://github.com/anevum/devon-station) | **ACTIVE / MAINTENANCE** | Current personal operating workspace; recover verified runtime source |
+| [devonakins.com](https://github.com/anevum/devonakins.com) | **ACTIVE** | Accurate professional portfolio |
+| [brandle](https://github.com/anevum/brandle) | **ACTIVE / FAMILY** | Retain independent original-origin game and player progress |
+| [brandicade](https://github.com/anevum/brandicade) | **ACTIVE / FAMILY** | Preserve actual live Access/save system; no unsafe draft cutover |
+| [cristyrusso.com](https://github.com/anevum/cristyrusso.com) | **PLANNED** | Separate approved website work; README-only is acceptable; no invented implementation |
+| [rhen](https://github.com/anevum/rhen) | **PARKED / VERIFY LIVE OWNER** | No new research development; verify Railway/broker dependency before retirement |
+| [severance](https://github.com/anevum/severance) | **PARKED / CREATIVE** | Preserve real experiments as optional family creative source; no forced game release |
+| [family-adventure-book](https://github.com/anevum/family-adventure-book) | **RETIREMENT CANDIDATE** | No further feature/release-gate work; Worker and history preserved pending safe decommission |
+
+### Completion gates for the current operating portfolio
+
+1. **Current apps only:** Every actively used app has an identified owning repository, recoverable public-safe source (or documented legitimate private-source exception), reproducible verification, and honest public source/deployment status. A planned site does **not** require an invented implementation.
+2. **Live safety:** Each production service has a documented real release owner, actual data/Access boundary, tested backup/restore where stateful, one safe deployer, and verified rollback. Avoid disruptive source cutovers to satisfy cosmetic repository goals.
+3. **Governance:** Enforce applicable GitHub branch protections and checks on active code; review historical secrets/rights exposures relevant to published source. Do not count locally passing tests or draft rule configurations as live enforcement.
+4. **Retirement safely completed:** For an obsolete deployed service, confirm real usage, connected routes/domains/Workers, storage and browser-local data, live release triggers and rollback. Freeze first; then disable/decommission only with clear owner acceptance. Archive source/history rather than delete first.
+5. **Accurate portfolio:** Update registry, status/owner links and the existing private Notion tracker; distinguish ACTIVE, PLANNED, PARKED and RETIREMENT CANDIDATE. No new duplicate tracking system.
+
+**Not required for this operational closeout:** Building unused prototypes, achieving a polished release for every lab, finishing RHEN or SEVERANCE, deploying the future Cristy website early, reviewing every old draft PR/branch, or deleting all unreferenced Workers. Historical backlog triage remains optional, prioritized by security/release impact and unique source value.
+
+### Immediate retirement boundary (no resource deletion authorized by this note)
+
+- `family-adventure-book` is a retirement candidate, not an actively funded release workstream. The existing Worker and four draft PR branches exist; do **not** merge draft release-gate/security work merely to retire it. Verify household use, local/browser progress preservation and any live URL before taking it offline.
+- Cloudflare currently has an enabled custom domain `lab.anevum.com` for `anevum-private-lab`, with additional lab route mappings. A name containing `lab`, `family`, `staging` or `test` does **not** establish inactivity. In particular `family-idea-*` belongs to current IdeaFlow; preserve it.
+- `rhen` is parked for feature work, not certified safe to delete or stop. Its broker/Railway runtime relationship remains unresolved.
+- Continue Brandle/Brandicade, personal and Cristy operational source recovery only to the point needed for stable ownership, recoverability and actual use.
+
+### Next narrow sequence
+
+1. Freeze new feature and release-gate expansion for parked/retirement candidates; preserve existing deployments during mapping.
+2. Verify live user-facing production routes and active owner/source for the **ACTIVE** rows; prioritize existing business and personal systems.
+3. Fix active-code branch rules, access, backup and release-owner gaps.
+4. Review obsolete family-adventure and mapped lab resources in one explicit retirement batch; preserve original source and rollback before service removal.
+5. Verify exact production smoke/data recovery, public portfolio claims and the existing Notion dispositions. Close operational infrastructure scope; archive historical work separately.
+
+**Owner decision still needed before irreversible deletion:** Which working domains, saved family progress and historical creative artifacts may be permanently removed. This section records a reprioritization, not a decommission approval. Public documentation deliberately excludes internal financial, clinical and family plans.
+
+---
+
 ## Verified account totals
 
 | Metric | Observed |
