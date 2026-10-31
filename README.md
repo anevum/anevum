@@ -12,11 +12,11 @@ I make open-source web software, interactive games, creative tools, and fictiona
 
 | Project | What it is | Source |
 | --- | --- | --- |
-| **ANEVUM** | Evolving creative platform, interactive universe, and experimental web experiences | [anevum-web](https://github.com/anevum/anevum-web) |
+| **ANEVUM** | Family creative studio, fictional universe, and web experiences | [anevum-web](https://github.com/anevum/anevum-web) |
 | **DevonAkins.com** | My personal website and public workbench | [devonakins.com](https://github.com/anevum/devonakins.com) |
 | **Brandle** | A personal five-letter browser game with offline support and local progress | [brandle](https://github.com/anevum/brandle) |
-| **The Adventure Book** | An interactive family-adventure prototype | [family-adventure-book](https://github.com/anevum/family-adventure-book) |
-| **RHEN** | Research and guarded market-system software | [rhen](https://github.com/anevum/rhen) |
+| **Brandicade** | A family game collection; source recovery is in progress | [brandicade](https://github.com/anevum/brandicade) |
+| **IdeaFlow** | Idea capture and meeting software; source reconciliation is in progress | [ideaflow](https://github.com/anevum/ideaflow) |
 
 Other repositories contain independent work in progress, including games, personal workspaces, and business applications. A public repository or README does **not** mean its application is finished or deployed.
 
@@ -30,6 +30,6 @@ Other repositories contain independent work in progress, including games, person
 
 ---
 
-**Currently:** Consolidating the GitHub portfolio into maintainable repositories while continuing work on ANEVUM, writing, and independent software.
+**Currently:** Supporting real business and personal operations, developing independent software, and making time for writing and family creative work.
 
 [Project registry](./PROJECT_REGISTRY.md) · Project-specific details are maintained in their respective repositories.
